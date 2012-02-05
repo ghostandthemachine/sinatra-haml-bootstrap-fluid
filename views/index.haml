@@ -1,35 +1,101 @@
-.container
-	.hero-unit
-		%h1
-			Hello, world!
-		%p
-			This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-		%p
-			%a.btn.btn-primary.btn-large{} Learn more
+.container-fluid
+	.row-fluid
+		.span3
+			.well.sidebar-nav
+				%ul.nav-list.nav
+					%li.nav-header
+						Sidebar
+					%li.nav-header
+						%a{:href => '/'} Link
+					%li
+						%a{:href => '/'} Link					
+					%li
+						%a{:href => '/'} Link
+					%li
+						%a{:href => '/'} Link
+					%li.nav-header
+						%a{:href => '/'} Link
+					%li
+						%a{:href => '/'} Link					
+					%li
+						%a{:href => '/'} Link
+					%li
+						%a{:href => '/'} Link
+					%li.nav-header
+						%a{:href => '/'} Link
+					%li
+						%a{:href => '/'} Link					
+					%li
+						%a{:href => '/'} Link
+					%li
+						%a{:href => '/'} Link
+					%li
+						%a{:href => '/'} Link					
+					%li
+						%a{:href => '/'} Link
+	
+		.span9
+			.hero-unit
+				%h1
+					Hello, world!
+				%p
+					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+				%p
+					%a.btn.btn-primary.btn-large
+						Learn more &raquo;
+			
+			.row-fluid
+				.span4
+					%h2
+						Heading
+					%p
+						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					%p
+						%a.btn{:href => '/'}
+							View Details &raquo;
+				.span4
+					%h2
+						Heading
+					%p
+						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					%p
+						%a.btn{:href => '/'}
+							View Details &raquo;
+				.span4
+					%h2
+						Heading
+					%p
+						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					%p
+						%a.btn{:href => '/'}
+							View Details &raquo;
+			.row-fluid
+				.span4
+					%h2
+						Heading
+					%p
+						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					%p
+						%a.btn{:href => '/'}
+							View Details &raquo;
+				.span4
+					%h2
+						Heading
+					%p
+						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					%p
+						%a.btn{:href => '/'}
+							View Details &raquo;
+				.span4
+					%h2
+						Heading
+					%p
+						Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					%p
+						%a.btn{:href => '/'}
+							View Details &raquo;
 
-	.row
-		.span4
-			%h2
-				Heading
-			%p
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-			%p
-				%a.btn{:href => '/'} View Details	
-		.span4
-			%h2
-				Heading
-			%p
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-			%p
-				%a.btn{:href => '/'} View Details
-		.span4
-			%h2
-				Heading
-			%p
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-			%p
-				%a.btn{:href => '/'} View Details
+				
+		%hr
 
-	%hr
-
-	%div= haml :footer
+		%div= haml :footer
