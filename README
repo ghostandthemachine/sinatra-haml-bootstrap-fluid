@@ -1,0 +1,18 @@
+This small project is intended to serve two purposes:
+  1). Make setting up a web app or simple site using these libraries as easy as:
+        - clone repo
+        - update deploy.rb in config/ for use with Vlad the Deployer
+        - deploy in a few commands
+
+  2). Being new to web coding, I often find myself trying to integrate too many
+      features and new ideas into working projects just because I can link some
+      scripts and get going. Often though this totally bloats and confuses my once
+      specific and thoughtout project. Hopefully an easy to grab, ready to go, test
+      bed will make it more apealling to just:
+        - clone the repo
+        - test the simple widget, library, whatever
+        - migrate changes to my actual project
+        - delete it
+
+I plan on making a single script which will automate most of the work in this
+and even just take another project as a param for set up
