@@ -1,0 +1,95 @@
+/ :javascript
+
+/ 	function togglePublicButton() {
+/ 		$("#public-private-toggle-btn").toggleClass("primary");
+/ 		if ($("#public-private-toggle-btn").hasClass('primary')) {
+/ 			$("#public-private-toggle-btn").attr('value', 'Private');
+/ 		} else {
+/ 			$("#public-private-toggle-btn").attr('value', 'Public');
+/ 		}
+/ 	};
+
+/ 	$(document).ready(function() {
+
+/ 		var sh = 0;
+/ 		var gh = 0;
+
+/ 		function shrinkFormDiv(div) {
+/ 			var height = div.height();
+/ 			div.height(0);
+/ 			return height;
+/ 		}
+
+/ 		var sellHeight = shrinkFormDiv($('#add-new-topic-form'));
+
+/ 		function addNewTopicForm () {
+/ 			$('#add-to-sell-form-btn').hide();
+/ 			$('#add-new-topic-form-container').html($('#add-new-topic-form').html());
+/ 		}
+
+/ 		function removeNewTopicForm () {
+/ 			$('#add-new-topic-form-container').append($('#add-book-to-sell-submit-btn').html());
+/ 			$('#add-to-sell-form-btn').show();
+/ 		}
+
+/ 		$("#add-to-sell-form-btn").click(function() {
+/ 			addNewTopicForm();
+/ 			console.error($('#add-new-topic-form').html());
+/ 		});
+
+/ 	//  add the listeners to the add topic buttons
+/ 		$("#add-new-topic-form-btn").click(function() {
+/ 			addToSellForm();
+/ 		});
+
+/ 	//  add the listeners to the add book buttons
+/ 		$("#add-new-topic-form-submit-btn").click(function() {
+/ 			removeNewTopicForm();
+/ 		});
+/ 	});
+
+.container
+	.content
+		.page-header
+			-unless @user == nil?
+				%h2="Dashboard"  
+				%br
+				-unless @user.img_url == nil? || @user.img_url.to_s.length < 1
+					%image{width: 30, height: 30, src: "/images/" << @user.user_name.to_s << "/" << @user.img_url.to_s}
+				-else
+					%image{width: 30, height: 30, src: "/images/missing_avatar_small.png"}
+
+
+				%h3= @user.user_name.to_s
+			-else
+				redirect '/'
+			%small
+				%a{href: "/user/" << @user.user_name.to_s << "/profile"} profile
+		.container#main-topic-nav
+			%table{class: "bordered-table zebra-striped", id: "userSortedTable"}
+				%thead
+					%tr
+						%th{class: 'header'} #
+						%th{class: "yellow header headerSortDown"} Title
+						%th{class: "header"}
+							%a{onclick: "addNewTopicForm();"} New Topic 
+					
+					%tr							
+						/ -unless @user == nil	
+						/ 	.container
+						/ 		-@user.topics.each do |topic|
+						/ 			%table{class: "bordered-table zebra-striped", id: "userSortedTable"}
+						/ 				%thead
+						/ 					%tr
+						/ 						%th{class: 'header'} Votes
+						/ 						%th{class: "yellow header headerSortDown"} Title
+						/ 						%th{class: "green header"} Edition
+						/ 						%th{class: "red header"} Department
+						/ 						%th{class: "blue header"}  Class
+
+					.input
+						%button.btn#add-to-sell-form-btn{:size => "30", :name => "submit-btn"} Create a topic
+
+			.container#add-new-topic-form-container
+				/ #add-new-topic-form=haml :add_new_topic_form
+

@@ -1,0 +1,23 @@
+.content
+	.container
+		.row
+			.span12
+				%form{ :action => "/register", :method => "post"}
+					%h1= 'Register'
+					%small= 'and start swapping books now'
+					%br
+					%br
+					%p Name:
+					%input{ :name => "user_name", :type => "text", :size => "30"}
+					%br
+					%br
+					%p Password:
+					%input{ :name => "password", :type => "password", :size => "30"}
+					%br
+					%br
+					%p Email:
+					%input{ :name => "email", :type => "text", :size => "30"}
+					%br
+					%br
+					%input.btn{ :name => "submit", :type => "submit", :value => "Submit"}
+		  
