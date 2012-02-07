@@ -1,0 +1,37 @@
+Sinatra, Haml and Bootstrap kick ass so I wanted to make a bare bones project to
+start from which would get the setup hassle out of the way. 
+
+Additionally, I thought remaking the example projects would be a good way to get
+comfortable with bootstrap and this arrangement. The examples from the
+Twitter.github.com site can be found at
+http://twitter.github.com/bootstrap/examples.html 
+
+The Sinatra, Haml, Bootstrap versions can be found here
+- Starter ->
+  https://github.com/ghostandthemachine/sinatra-haml-bootstrap-starter
+- Hero -> https://github.com/ghostandthemachine/sinatra-haml-bootstrap-hero
+- Fluid -> https://github.com/ghostandthemachine/sinatra-haml-bootstrap-fluid
+
+
+Setup:
+
+  All of the example projects and the bare bones project are set up with:
+    - Bundler
+    - Shotgun
+    - Rack
+    - Haml
+    - Vlad the Deployer
+
+  To get up and running all that should be needed is to install the Ruby gem
+Bundler if up don't already have it installed then run:
+    - $ bundle install
+
+  That should install everything that is need for the app to run. To start it
+run:
+    - $ shotgun
+
+  As is the case with any Shotgun app you can update the config.ru file to
+change Shotgun settings. Like wise /config/deploy.rb for the Vlad settings and
+Gemfile for your bundler install settings
+
+enjoy!
