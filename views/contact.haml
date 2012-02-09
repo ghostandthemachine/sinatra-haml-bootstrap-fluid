@@ -1,0 +1,16 @@
+.content
+	.container
+		.row
+			.span12
+				%form{ :action => "/register", :method => "post"}
+					%h1= 'Contact'
+					%p Name:
+					%input.form-input{ :name => "user_name", :type => "text", :size => "30"}
+					%p Email:
+					%input.form-input{ :name => "email", :type => "text", :size => "30"}
+					%br
+					%textarea{:name => "contact_body", :cols => "20", :rows => "10"}
+					%br
+					%input.btn{ :name => "submit", :type => "submit", :value => "Send"}
+						%input.btn{ :name => "clear", :type => "submit", :value => "Clear"}
+		  

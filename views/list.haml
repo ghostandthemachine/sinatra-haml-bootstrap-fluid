@@ -1,0 +1,26 @@
+.container
+	.content
+		%table{class: "bordered-table zebra-striped", id: "userSortedTable"}
+			%thead
+				%tr
+					%td{colspan: '8'}
+						%h4 Users
+				%tr
+					%th{class: 'header'} ID
+					%th{class: 'header red'} 	User Name
+					%th{class: 'header blue'} 	Email
+					%th{class: 'header green'} 	Creation Date
+
+			~@users.each do |user|
+				%tr
+					%td= user.id
+					%td= user.user_name
+					%td= user.email
+					%td= user.created_at
+
+:plain
+	<script>
+	$(function() {
+		$("table#userSortedTable").tablesorter({ sortList: [[1,0]] });
+	});
+	</script>

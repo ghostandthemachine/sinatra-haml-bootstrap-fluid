@@ -11,9 +11,17 @@
 					%li
 						%a{:href => '/'}Home
 					%li
-						%a{:href => '/'}About
+						%a{:href => '/about'}About
 					%li
-						%a{:href => '/'}Contact
+						%a{:href => '/register'}Register
+					%li
+						%a{:href => '/contact'}Contact
 				%p.navbar-text.pull-right
-					Logged in as 
-					%a{:href => '/'} username
+					-if logged_in?
+						%a{:href => "/user/" << @user.user_name.to_s << "/dashboard"} #{@user.user_name} 
+						Dashboard
+						|
+						%a{:href => "/logout" } Logout
+						
+					-else 
+						%a{:href => '/login'} Login

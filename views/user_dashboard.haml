@@ -1,0 +1,19 @@
+.container
+	.content
+		.page-header
+			-unless @user == nil?
+				%h2="Dashboard"  
+				%br
+				-unless @user.img_url == nil? || @user.img_url.to_s.length < 1
+					%image{width: 30, height: 30, src: "/images/" << @user.user_name.to_s << "/" << @user.img_url.to_s}
+				-else
+					%image{width: 30, height: 30, src: "/images/missing_avatar_small.png"}
+
+
+				%h3= @user.user_name.to_s
+			-else
+				redirect '/'
+			%small
+				%a{href: "/user/" << @user.user_name.to_s << "/profile"} profile
+		.container#main-topic-nav
+			// do your user data tables etc. here
