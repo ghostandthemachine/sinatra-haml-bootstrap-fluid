@@ -1,14 +1,14 @@
 # Sinatra + Haml + Bootstrap
 
-##Main components of project
+## Main components of project
 
-####Sinatra
+#### Sinatra
 - Sinatra [site](http://www.sinatrarb.com/)
 
-####Haml
+#### Haml
 - Haml [site](http://haml.info/)
 
-####Bootstrap
+#### Bootstrap
 - Bootstrap [site](http://twitter.github.io/bootstrap/)
 - The examples from the Twitter.github.com site can be found [here](http://twitter.github.com/bootstrap/examples.html)
 
